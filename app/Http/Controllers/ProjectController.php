@@ -37,6 +37,7 @@ class ProjectController extends Controller
             $file_format= $request->sertifikat->getClientOriginalExtension();
             $uploadSuccess = $request->sertifikat->move($direktori,$nama_file);
         }
+        
         Project::create([
             'nama_projek' => $request->nama_projek,
             'deskripsi_projek' => $request->deskripsi_projek,
